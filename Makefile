@@ -1,4 +1,4 @@
-CPPFLAGS=-Iinclude
+CPPFLAGS=-Ilibarchive/libarchive
 LDFLAGS=-larchive
 
 all: zip2tar tar2zip

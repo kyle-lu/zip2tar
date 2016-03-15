@@ -38,6 +38,7 @@ tar2zip(const char *tarfile, const char *zipfile)
 	zip = archive_write_new();
 	archive_read_support_format_tar(tar);
 	archive_write_set_format_zip(zip);
+	archive_write_set_options(zip, "compression-level=9");
 	if (tarfile != NULL && strcmp(tarfile, "-") == 0)
 		tarfile = NULL;
 	if (zipfile != NULL && strcmp(zipfile, "-") == 0)

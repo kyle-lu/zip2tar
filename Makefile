@@ -1,5 +1,5 @@
-CPPFLAGS=-Ilibarchive/libarchive
-LDFLAGS=-larchive
+CPPFLAGS=-Ilibarchive/libarchive -DHAVE_ZLIB_H
+LDFLAGS=-lz libarchive/.libs/libarchive.a
 
 all: zip2tar tar2zip
 
